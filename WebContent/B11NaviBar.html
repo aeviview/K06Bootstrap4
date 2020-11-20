@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B11NaviBar.html</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        [fixed-top] : 네비바를 페이지 상단에 고정시켜서
+            스크롤해도 움직이지 않도록 설정한다!
+     -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+        <a class="navbar-brand" href="#">
+            <img src="./images/bird.jpg" alt="Logo" style="width:40px;">
+        </a>
+      
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">활성화링크</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link ropdown-toggle" data-toggle="dropdown" href="#">Link2(드롭다운)</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">비활성화링크</a>
+          </li>
+        </ul>
+
+        <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+
+      </nav>
+    
+    <div class="container">
+        
+        <h2>아코디언 구현하기</h2>
+        <br><br>
+
+        <div id="accordion">
+
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                    그들은 무엇이 얼음에 위하여서 있는가? 풀이 가장 창공에 그들은 할지라도 보내는 청춘을 끓는다. 안고, 그들은 같이, 그들의 용감하고 같이 가치를 황금시대다. 불러 날카로우나 열락의 청춘을 위하여 없으면, 어디 그들은 것이다. 과실이 무엇을 끓는 낙원을 두기 꾸며 것이다. 인생을 인생을 커다란 이상은 것이 부패를 것이다. 사람은 것이 하여도 청춘을 타오르고 아름다우냐? 피가 몸이 방황하였으며, 불어 이상은 가치를 길을 그들의 부패뿐이다. 못하다 있음으로써 착목한는 청춘은 무엇이 봄바람이다. 같이, 따뜻한 찾아다녀도, 현저하게 시들어 새가 불어 뜨고, 이것이다.
+                    <br><br>
+                    별과 이상을 못할 없으면 구하기 현저하게 만천하의 황금시대를 그러므로 것이다. 커다란 없으면 커다란 뼈 자신과 뭇 것이다. 꽃이 따뜻한 이상 현저하게 이상은 길을 소리다.이것은 말이다. 있는 청춘은 인간이 것이다.보라, 방황하여도, 끓는 것이다. 들어 속잎나고, 뼈 피고, 청춘이 이 것이다. 우는 가슴이 때까지 바이며, 같이, 그들에게 예가 것은 이것이다. 살 그들은 인간에 이것이다. 위하여서 청춘이 가슴이 끓는 바이며, 예가 못할 것이다.보라, 쓸쓸하랴? 가진 더운지라 이것은 못할 피어나기 착목한는 공자는 되려니와, 이 있는가?
+                    <br><br>
+                    몸이 유소년에게서 자신과 그들의 우리는 웅대한 사막이다. 피가 수 우리의 봄바람을 철환하였는가? 오직 심장의 방황하였으며, 앞이 인간이 불러 봄바람이다. 이 노년에게서 주는 부패를 온갖 말이다. 평화스러운 것이다.보라, 얼마나 품에 있는 그것을 것은 것이다. 인간이 때에, 너의 넣는 가치를 같이 그들의 내는 피다. 것은 돋고, 이상을 붙잡아 길지 피고 그러므로 안고, 있음으로써 이것이다. 이것은 작고 얼마나 힘있다. 가진 천하를 있으며, 착목한는 얼음에 뼈 보는 것이다. 바이며, 설산에서 사랑의 무엇을 가는 능히 끓는다.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    벌써 아무 별 봅니다. 덮어 아직 소녀들의 밤이 파란 쉬이 까닭입니다. 책상을 가난한 하나의 쉬이 이름과, 많은 이네들은 봅니다. 하늘에는 어머니, 밤을 내린 가득 별 별 까닭입니다. 언덕 부끄러운 나는 시인의 이름과, 다하지 하나에 차 슬퍼하는 봅니다. 보고, 써 남은 버리었습니다. 당신은 사랑과 그러나 가득 계십니다.
+                    <br><br>
+                    파란 이 이웃 소학교 벌레는 청춘이 별 오면 시인의 까닭입니다. 시인의 가득 계집애들의 봅니다. 위에 하나에 별을 봅니다. 이름과, 피어나듯이 가난한 마디씩 아이들의 이름을 다 덮어 봅니다. 이름자를 가을 딴은 속의 소녀들의 헤는 봅니다.
+                </div>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum..
+                  구글에 한글입숨이라고 검색하면 아무 의미도 없는 한글을 나열한 사이트가 나온다
+                  유용한 사이트기 때문에 잘 이용하도록 하자! (다른 언어도 가능)
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+    </div>
+</body>
+</html>

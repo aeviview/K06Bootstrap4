@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoardList.html</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--Font Awesome 5 CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--구글CDN-->
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Navigation Bars 구현 -->
+    <!-- fixed-top으로 Navi 상단 고정 -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+        <a class="navbar-brand" href="#">
+            <!-- KOSMO 이미지 그림판으로 추출해서 경로 설정하고 크기 조정함(width) -->
+            <img src="../images/kosmo.png" alt="Logo" style="width:80px;">
+        </a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">홈으로</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">회원제게시판</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">자료실</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">임시Menu</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">항목 1</a>
+                    <a class="dropdown-item" href="#">항목 2</a>
+                    <a class="dropdown-item" href="#">항목 3</a>
+                </div>
+            </li>
+        </ul>
+        
+            <!-- 검색창 설정 -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="검색">
+                <button class="btn btn-secondary" type="submit">
+                    <i class="material-icons" style="font-size:20px">search</i>
+                </button>
+                </form>
+            </nav>
+            <br>
+            
+            <!-- flex를 사용해서 가장 오른쪽으로 밀기! -->
+            <div class="d-flex mb-3 form-inline ml-auto">
+                
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="text-secondary">
+                                <i class="material-icons" style="font-size:17px">person</i>회원가입
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="text-secondary">
+                                <i class="material-icons" style="font-size:17px">vpn_key</i>로그인
+                            </div>
+                        </a>
+                    </li>
+                </ul>          
+            </div>
+    </nav>
+
+    <!-- Bootstrap의 Grid시스템을 활용하여 페이지 레이아웃을 구성한다! -->
+    <div class="row">
+        <div class="col-1">
+            <h2 class="text-center"><br><br><br></h2> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <!-- 좌측메뉴영역 -->
+            <ul class="list-group dropright">
+            <!-- 멀티게시판 화살표를 오른쪽으로 바꾼다(방향변환) dropfight -->
+            <!-- 부모 엘리먼트에 적용해야 하기 때문에 li가 아닌 ul에서 바꿔줌! -->
+                <li class="list-group-item active"><a href="#" class="text-danger">공지사항</a></li>
+                <li class="list-group-item"><a href="#">자유게시판</a>
+                    <span class="badge badge-primary badge-pill">10</span></li>
+                <li class="list-group-item"><a href="#">질문과답변</a>
+                    <span class="badge badge-primary badge-pill">50</span></li>
+                <!-- 드롭다운 메뉴 추가 -->
+                <li class="list-group-item dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">
+                    멀티게시판
+                    <div class="dropdown-menu">
+                    <!-- Dropdown Header(작은글씨) -->
+                    <div class="dropdown-header">회원제게시판</div>
+                    <a class="dropdown-item" href="#">GuestBook</a>
+                    <a class="dropdown-item" href="#">Q&A</a>
+                    <div class="dropdown-divider"></div>
+                    <!-- 메뉴 구분선 divider-->
+                    <div class="dropdown-header">게스트게시판</div>
+                    <a class="dropdown-item" href="#">Free Notice Board</a>
+                    <a class="dropdown-item" href="#">Sign Up</a>
+                    </div>
+                </li>
+                <li class="list-group-item"><a href='#'>FAQ</a>
+                    <span class="badge badge-primary badge-pill">5</span></li>
+            </ul>
+        </div>
+
+        <div class="col-9">
+            <!-- 컨텐츠영역 -->
+            <h2>게시판 - <span style="font-size: 15px;">이런저런 기능이 있는 게시판입니다.</span></h2>
+            <!-- 게시판리스트부분 -->
+            <table class="table table-bordered table-hover table-striped">
+                <colgroup>
+                    <col width="60px"/>
+                    <col width="*"/>
+                    <col width="120px"/>
+                    <col width="120px"/>
+                    <col width="80px"/>
+                    <col width="60px"/>
+                </colgroup>				
+                <thead>
+                <tr style="background-color: rgb(133, 133, 133); " class="text-center text-white">
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                    <th>첨부</th>
+                </tr>
+                </thead>				
+                <tbody>
+                <!-- <%for(int i=1 ; i<=5 ; i++){ %> -->
+                <!-- 리스트반복 -->
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                <tr>
+                    <td class="text-center">번호</td>
+                    <td class="text-left"><a href="ViewSkin.jsp">제목</a></td>
+                    <td class="text-center">작성자</td>
+                    <td class="text-center">작성일</td>
+                    <td class="text-center">조회수</td>
+                    <td class="text-center"><i class="material-icons" style="font-size:20px">attach_file</i></td>
+                </tr>
+                
+                <!-- <% } %> -->
+                </tbody>
+                </table>
+
+                <!-- 페이지 번호 삽입 -->
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#page=1">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#page=2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#page=3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
+            </div>
+    </div>
+    
+
+</div>   
+</body>
+
+</html>
